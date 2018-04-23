@@ -1,0 +1,50 @@
+﻿<Window xmlns:dxpg="http://schemas.devexpress.com/winfx/2008/xaml/pivotgrid"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+        xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+        xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars" 
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        x:Class="DXPivotGrid_BeginEndUpdate.MainWindow" 
+        Height="600" Width="600" Title="Main Window">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <dxpg:PivotGridControl Name="pivotGridControl1" Grid.Row="1" Margin="10,0,10,10">
+            <dxpg:PivotGridControl.Fields>
+                <dxpg:PivotGridField Name="fieldA" FieldName="A" Area="RowArea"
+                                     Caption="A" />
+                <dxpg:PivotGridField Name="fieldB" FieldName="B" Area="ColumnArea"
+                                     Caption="B" />
+                <dxpg:PivotGridField Name="fieldData" FieldName="Data" Area="DataArea"
+                                     Caption="Data" />
+            </dxpg:PivotGridControl.Fields>
+        </dxpg:PivotGridControl>
+        <Grid Margin="10,10,10,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="310" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <TextBlock TextWrapping="WrapWithOverflow">
+                    Try transposing the pivot grid with and without locking
+                    it, to see the difference in performance.
+                </TextBlock>
+                <Button x:Name="btnRun" Click="btnRun_Click" Grid.Row="1" Content="Transpose"
+                        Width="75" Height="23" HorizontalAlignment="Left" />
+            </Grid>
+                <GroupBox Header="Pivot Grid Locking Options" Grid.Column="1" Margin="0,0,0,5">
+                    <StackPanel Orientation="Vertical">
+                        <RadioButton x:Name="rbLocked" Content="Lock the Pivot Grid"
+                                     IsChecked="True" Margin="0,5,0,2" />
+                        <RadioButton Content="Do Not Lock the Pivot Grid"
+                                     Margin="0,2,0,5" />
+                    </StackPanel>
+                </GroupBox>
+        </Grid>
+    </Grid>
+</Window>
