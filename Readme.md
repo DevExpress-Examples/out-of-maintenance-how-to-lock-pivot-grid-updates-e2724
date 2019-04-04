@@ -1,7 +1,7 @@
 <!-- default file list -->
 *Files to look at*:
 
-* [MainWindow.xaml](./CS/DXPivotGrid_BeginEndUpdate/MainWindow.xaml) (VB: [MainWindow.xaml.vb](./VB/DXPivotGrid_BeginEndUpdate/MainWindow.xaml.vb))
+* [MainWindow.xaml](./CS/DXPivotGrid_BeginEndUpdate/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/DXPivotGrid_BeginEndUpdate/MainWindow.xaml))
 * [MainWindow.xaml.cs](./CS/DXPivotGrid_BeginEndUpdate/MainWindow.xaml.cs) (VB: [MainWindow.xaml.vb](./VB/DXPivotGrid_BeginEndUpdate/MainWindow.xaml.vb))
 <!-- default file list end -->
 # How to lock pivot grid updates
