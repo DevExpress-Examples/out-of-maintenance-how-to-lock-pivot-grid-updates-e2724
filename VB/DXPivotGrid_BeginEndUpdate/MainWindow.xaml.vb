@@ -1,5 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System
+﻿Imports System
 Imports System.Data
 Imports System.Windows
 Imports DevExpress.Xpf.PivotGrid
@@ -7,6 +6,7 @@ Imports DevExpress.Xpf.PivotGrid
 Namespace DXPivotGrid_BeginEndUpdate
 	Partial Public Class MainWindow
 		Inherits Window
+
 		Public Sub New()
 			InitializeComponent()
 			pivotGridControl1.DataSource = GetDataTable()
@@ -55,7 +55,7 @@ Namespace DXPivotGrid_BeginEndUpdate
 			table.Columns.Add("Data", GetType(Integer))
 			For i As Integer = 0 To 999
 				For j As Integer = 0 To 499
-					table.Rows.Add("A"c + i.ToString(), "B"c + j.ToString(), (CInt(Fix(i)) / 100))
+					table.Rows.Add("A"c & i.ToString(), "B"c & j.ToString(), (CInt(i) \ 100))
 				Next j
 			Next i
 			Return table
