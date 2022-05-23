@@ -10,14 +10,24 @@
             <RowDefinition Height="Auto" />
             <RowDefinition />
         </Grid.RowDefinitions>
-        <dxpg:PivotGridControl Name="pivotGridControl1" Grid.Row="1" Margin="10,0,10,10">
+        <dxpg:PivotGridControl Name="pivotGridControl1" Grid.Row="1" Margin="10,0,10,10"
+                               DataProcessingEngine="Optimized">
             <dxpg:PivotGridControl.Fields>
-                <dxpg:PivotGridField Name="fieldA" FieldName="A" Area="RowArea"
-                                     Caption="A" />
-                <dxpg:PivotGridField Name="fieldB" FieldName="B" Area="ColumnArea"
-                                     Caption="B" />
-                <dxpg:PivotGridField Name="fieldData" FieldName="Data" Area="DataArea"
-                                     Caption="Data" />
+                <dxpg:PivotGridField Name="fieldA" Area="RowArea">
+                    <dxpg:PivotGridField.DataBinding>
+                        <dxpg:DataSourceColumnBinding ColumnName="A"/>
+                    </dxpg:PivotGridField.DataBinding>
+                </dxpg:PivotGridField>
+                <dxpg:PivotGridField Name="fieldB" Area="ColumnArea">
+                    <dxpg:PivotGridField.DataBinding>
+                        <dxpg:DataSourceColumnBinding ColumnName="B"/>
+                    </dxpg:PivotGridField.DataBinding>
+                </dxpg:PivotGridField>
+                <dxpg:PivotGridField Name="fieldData"  Area="DataArea">
+                    <dxpg:PivotGridField.DataBinding>
+                        <dxpg:DataSourceColumnBinding ColumnName="Data"/>
+                    </dxpg:PivotGridField.DataBinding>
+                </dxpg:PivotGridField>
             </dxpg:PivotGridControl.Fields>
         </dxpg:PivotGridControl>
         <Grid Margin="10,10,10,0">
